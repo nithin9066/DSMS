@@ -9,8 +9,8 @@ function Login() {
     useEffect(()=>{
         axios({
             method: "GET",
-            url: "https://rukhsaty.com/api/auth/all_schools_list",
-            
+            url: "http://dsms.mentrictech.in/backend/api/auth/all_schools_list",
+
         }).then(({data})=>{
             setschoolList(data.data.result)
         }).catch((error)=>{
@@ -22,7 +22,7 @@ function Login() {
         console.log(data);
         axios({
             method: 'POST',
-            url: "https://rukhsaty.com/api/auth/admin_login_with_schoolid",
+            url: "http://dsms.mentrictech.in/backend/api/auth/admin_login_with_schoolid",
             data: data,
         }).then((res) =>{
             console.log(res);
