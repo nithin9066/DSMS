@@ -9,7 +9,7 @@ function Login() {
     useEffect(()=>{
         axios({
             method: "GET",
-            url: "http://dsms.mentrictech.in/backend/api/auth/all_schools_list",
+            url: "https://dsms.mentrictech.in/backend/api/auth/all_schools_list",
 
         }).then(({data})=>{
             setschoolList(data.data.result)
@@ -22,7 +22,7 @@ function Login() {
         console.log(data);
         axios({
             method: 'POST',
-            url: "http://dsms.mentrictech.in/backend/api/auth/admin_login_with_schoolid",
+            url: "https://dsms.mentrictech.in/backend/api/auth/admin_login_with_schoolid",
             data: data,
         }).then((res) =>{
             console.log(res);
