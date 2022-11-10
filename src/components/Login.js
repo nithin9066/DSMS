@@ -9,7 +9,7 @@ function Login() {
     useEffect(()=>{
         axios({
             method: "GET",
-            url: "https://rukhsaty.com/api/auth/all_schools_list",
+            url: "http://dsms.mentrictech.in/backend/api/auth/all_schools_list",
             
         }).then(({data})=>{
             setschoolList(data.data.result)
